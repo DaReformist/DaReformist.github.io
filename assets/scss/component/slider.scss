@@ -1,0 +1,272 @@
+.slider{
+    position: relative;
+    padding:6.25rem 0;
+    overflow: hidden;
+    padding-bottom:0;
+
+    .slide-content{
+        position: relative;
+        transition:all ease-in .6s;
+
+        .owl-carousel{
+            .owl-dots{
+                position: absolute;
+                display: flex;
+                justify-content:center;
+                width: 100%;
+                bottom:0;
+                z-index: 1;
+                padding-right: 2.5rem;
+
+                .owl-dot{
+                    height: .625rem;
+                    width: .625rem;
+                    background-color:$color-primary;
+                    border-radius: 50%;
+                    display: block;
+                    margin: .625rem;
+                    &:focus,&:active{
+                        box-shadow:none !important;
+                        border:none !important
+                    }
+
+                    &.active{
+                        background-color:$icons-color;
+                    }
+                }
+            }
+        } 
+
+        .round{
+            position:absolute;
+            top:20%;
+            height:300px;
+            width:300px;
+            border-radius:50%;
+            border:1px solid $color-primary;
+            z-index:9;
+            opacity:.3;
+            left:-200px;
+        }
+
+        .shape{
+            position: absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+
+            .shape-1{
+                position: absolute;
+                width:.625rem;
+                height:1.25rem;
+                background:$icons-color;
+                border-radius:1.25rem;
+                left:13.7%;
+
+                &::before{
+                    position: absolute;
+                    content: "01";
+                    font-size:1.25rem;
+                    color:$icons-color;
+                    font-weight:bold;
+                    top:1.25rem
+                }
+            }
+
+            .shape-2{
+                position: absolute;
+                width:6.25rem;
+                height: 3.125rem;
+                background:$color-primary;
+                border-radius:1.25rem;
+                left:25%;
+                transform: rotate3d(34, 13, 0, 66deg);
+                opacity:.1;
+
+                &::before{
+                  position: absolute;
+                  content:"";
+                  width:6.25rem;
+                  height: 3.125rem;
+                  background:$color-primary;
+                  border-radius:1.25rem;
+                  left:3.125rem;
+                  top:6.25rem;
+                  transform: rotate3d(4, 13, 0, 66deg); 
+                }
+            }
+
+            .shape-3{
+                position: absolute;
+                width:.625rem;
+                height:1.25rem;
+                background:$icons-color;
+                border-radius:1.25rem;
+                right:11.8%;
+
+                &::before{
+                    position: absolute;
+                    content:"banner";
+                    font-size:1.125rem;
+                    color:$color-primary;
+                    text-transform:uppercase;
+                    font-weight:700;
+                    transform:rotate(90deg);
+                    top:4.375rem;
+                    right:-2.0625rem;
+                    opacity:.2;
+                    z-index:9;
+                }
+            }
+
+            .shape-4{
+                position: absolute;
+                bottom:0;
+                left:12.1%;
+
+                h5{
+                    font-size:1.125rem;
+                    color:$color-primary;
+                    text-transform:uppercase;
+                    font-weight:700;
+                    transform:rotate(90deg);
+                    margin: 0px 0px 64px -26px;
+                    opacity:.1;
+                }
+
+                ol{
+                    li{
+                        display:block;
+                        margin:.625rem 1.25rem;
+                        position: relative;
+                        z-index:99;
+                        cursor: pointer;
+                        transition: .3s;
+                        color:$color-primary;
+                        opacity:.5;
+
+                        &:last-child{
+                            margin-bottom:0;
+                        }
+
+                        &:hover{
+                            color:$icons-color;
+                            opacity:1;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        .item{
+            .container{
+                position: relative;
+
+                &::before{
+                    position: absolute;
+                    content:"";
+                    width:100%;
+                    height:100%;
+                    border:1px solid $color-primary;
+                    top:0;
+                    opacity:.1;
+                    border-top:0;
+                    border-bottom:0;
+                }
+
+                &::after{
+                    position: absolute;
+                    content:"";
+                    width:1px;
+                    left:50%;
+                    height:100%;
+                    opacity:.1;
+                    top:0;
+                    background:$color-primary;
+
+                }
+
+            }
+            .wrapper{
+                position: relative;
+                flex-wrap:wrap;
+                width:100%;
+                justify-content:center;
+                z-index:9;
+
+                .content{
+                    position: absolute;
+                    transform:translateY(100px);
+                    transition:all ease-in-out .6s;
+                    text-align: center;
+                    z-index: 99;
+                    top:20%;
+                    h1{
+                        color:$color-primary;
+                        font-size:3.125rem;
+                        text-transform:uppercase;
+                        letter-spacing:.0625rem;
+                        margin:.625rem 0;
+                        font-weight:800;
+                        display:block;
+                    }
+                     h4{
+                         color:$color-primary;
+                         font-size:1.25rem;
+                         font-weight:100;
+                         text-transform:capitalize;
+                     }
+                     
+                     a{
+                         padding:.3125rem 1.25rem;
+                         border-radius:1.25rem;
+                         background:$icons-color;
+                         color:$color-primary;
+                         font-size:1.125rem;
+                         text-transform:capitalize;
+                         display:inline-block;
+                         margin:.3125rem;
+                         border:0;
+                         border-bottom:.125rem solid #c4b203;
+                         cursor: pointer;
+                         position: relative;
+                         z-index: 99;
+                     }
+                }
+
+                .image{
+                    position: relative;
+                    z-index:8;
+
+                    &::before{
+                        position: absolute;
+                        content:"";
+                        left:-4.375rem;
+                        top:1.25rem;
+                        height:31.25rem;
+                        width:31.25rem;
+                        border-radius:50%;
+                        border-bottom:solid  #5d5502 1.875rem;
+                        border-top:1.875rem solid #5d5502;
+                        border-left:1.875rem solid #5d5502;
+                        border-right:1.875rem solid #5d5502;
+                        z-index:7;
+
+                        @media screen and(max-width:575.98px){
+                            // height:;
+                            // position: relative;
+                            // width:;
+                        }
+                    }
+
+                    img{
+                        position: relative;
+                        z-index:9;
+                    }
+                }
+            }
+        }
+    }
+}
